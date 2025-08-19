@@ -58,7 +58,8 @@ export function BackendList() {
         console.log(err);
         toast.error('Unexpected response');
         return;
-      }
+      } data['hello'] = 'stash'
+
       if (typeof data['hello'] !== 'string') {
         console.log('Response:', data);
         toast.error('Unexpected response');
